@@ -1,0 +1,66 @@
+html, body {
+padding: 0px;
+margin: 0px;    
+}
+
+.banner {
+height:250px;
+width:100%;
+background-image: url(img/fon.jpg);    
+display: flex;
+flex-direction: column;    
+align-items: center;  
+}
+
+.time {
+display: flex;    
+}
+.sweatshot {
+background-color: yellow;   
+margin-right: 20px;        
+margin-left: 20px; 
+width: 140px; 
+height: 40px; 
+border-radius: 2px;
+border: 0px;   
+color:black;
+}
+
+#timer{
+text-align: center;
+font-family: fantasy;
+font-size: 20px;
+cursor: default;
+display: flex;   
+justify-content: center; 
+  
+    
+}
+ 
+#hour {
+color: black;    
+width:30px;
+height: 30px; 
+background-color: white;     
+padding: 5px;   
+margin-right: 20px;     
+}
+#minute {
+color: black;
+width:30px;
+height: 30px;    
+background-color: white;   
+padding: 5px;    
+   
+}
+
+img {
+ 
+  padding: 5px;     
+}
+.time-desc {
+color: yellow;
+}
+span {
+    padding: 10px;
+}
