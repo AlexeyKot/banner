@@ -1,66 +1,167 @@
-html, body {
-padding: 0px;
-margin: 0px;    
+html,
+body {
+    padding: 0px;
+    margin: 0px;
 }
 
 .banner {
-height:250px;
-width:100%;
-background-image: url(img/fon.jpg);    
-display: flex;
-flex-direction: column;    
-align-items: center;  
+    height: 250px;
+    width: 100%;
+    background: url(img/fon.jpg) no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .time {
-display: flex;    
-}
-.sweatshot {
-background-color: yellow;   
-margin-right: 20px;        
-margin-left: 20px; 
-width: 140px; 
-height: 40px; 
-border-radius: 2px;
-border: 0px;   
-color:black;
+    display: flex;
 }
 
-#timer{
-text-align: center;
-font-family: fantasy;
-font-size: 20px;
-cursor: default;
-display: flex;   
-justify-content: center; 
-  
-    
+.time__but {
+    background-color: yellow;
+    margin-right: 190px;
+    margin-left: 190px;
+    cursor: pointer;
+    width: 140px;
+    height: 40px;
+    border-radius: 2px;
+    border: 0px;
+    color: black;
+    font-family: "Intro";
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 1px;
 }
- 
-#hour {
-color: black;    
-width:30px;
-height: 30px; 
-background-color: white;     
-padding: 5px;   
-margin-right: 20px;     
+
+#timer {
+    text-align: center;
+    font-family: fantasy;
+    cursor: default;
+    display: flex;
+    justify-content: center;
 }
+
+#hour,
 #minute {
-color: black;
-width:30px;
-height: 30px;    
-background-color: white;   
-padding: 5px;    
-   
+    color: black;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    padding: 5px;
+    margin-right: 20px;
+    font-size: 15px;
 }
 
-img {
- 
-  padding: 5px;     
+#minute {
+    margin-right: 0px;
 }
+
+.banner__img {
+    padding: 5px;
+}
+
 .time-desc {
-color: yellow;
+    color: yellow;
 }
-span {
+
+.time-desc__hours,
+.time-desc__minutes {
     padding: 10px;
+}
+
+.banner__img_pad {
+    padding: 15px;
+}
+
+.time-mob {
+    display: none;
+}
+
+@media (max-width: 414px) {
+    .banner {
+        height: 200px;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        background-image: url(img/mobile/fon.jpg) no-repeat;
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+    #timer {
+        font-size: 10px;
+        margin-top: 5px;
+    }
+    #hour,
+    #minute {
+        color: black;
+        width: 10px;
+        height: 10px;
+        padding: 5px;
+        margin-right: 20px;
+    }
+    .banner__img {
+        height: 5vh;
+        width: 99vw;
+        padding: 0px;
+        margin-top: 10px;
+       
+    }
+    .banner__img_pad {
+        padding: 0px;
+        
+    }
+    .time-desc {
+        font-size: 10px;
+    }
+    .time__but {
+        display: none;
+    }
+    .time-mob {
+        display: flex;
+        justify-content: center;
+    }
+    .time-mob__but {
+        height: 30px;
+        font-size: 10px;
+        width: 100px;
+        margin: 0px;
+        background-color: yellow;
+        cursor: pointer;
+        border-radius: 2px;
+        border: 0px;
+        color: black;
+        font-family: "Intro";
+        font-weight: bold;
+        margin: 0 50px 15px;
+    }
+  
+    #timer {
+    font-size: 10px; 
+    padding: 0px;
+    margin: 0px;
+    margin-top: 5px;    
+    }
+    
+    .banner__img_mob {
+        height: 10px;
+        margin-top: 20px;
+    }
+    #minute, #hour {
+        font-size: 10px;
+    }
+  
+    .time-desc__hours {
+      margin-left: 40vw; 
+    }
+    
+  .time-desc__minutes {     
+    margin-right: 20vw;
+  
+    }
+    .time-mob__but {
+     
+    }
+    
 }

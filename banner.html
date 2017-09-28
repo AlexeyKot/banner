@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">    
 <meta http-equiv='Content-Type' content='text/html; charset=utf8'>
+<meta name="viewport" content="width=device-width, initial-scale=1">    
 <title>Banner</title>
 <link rel="stylesheet" href="banner.css">      
 <script type="text/javascript" src="https://unpkg.com/jquery"></script> 
@@ -27,10 +28,17 @@ window.onload = function(){
                 else end = true;
             }
         
+        if(minute == 0 && hour == 0 ) {
+            end = true;
+              document.getElementById('hour').innerHTML = hour;
+              document.getElementById('minute').innerHTML = minute;
+        }
+        
  
         if(end){
             clearInterval(intervalID);
-            alert("Таймер сработал!");
+            alert("Конец акции!");
+            
         }else{
             document.getElementById('hour').innerHTML = hour;
             document.getElementById('minute').innerHTML = minute;
@@ -44,22 +52,30 @@ window.onload = function(){
 </head>
 <body>
  <div class="banner">
-     <img src="img/%D0%A1%D0%B5%D0%BA%D1%80%D0%B5%D1%82%D0%BD%D0%B0%D1%8F%20%D0%B0%D0%BA%D1%86%D0%B8%D1%8F%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D1%87%D0%B8%D0%BA%D0%BE%D0%B2.svg">
-     <img src="img/%D0%A4%D1%83%D1%82%D0%B1%D0%BE%D0%BB%D0%BA%D0%B0%20%D0%B7%D0%B0%201%20%D1%80%D1%83%D0%B1%20%D0%9F%D1%80%D0%B8%20%D0%BF%D0%BE%D0%BA%D1%83%D0%BF%D0%BA%D0%B5%20%D0%A1%D0%B2%D0%B8%D1%82%D1%88%D0%BE%D1%82%D0%B0%20%D0%B8%D0%BB%D0%B8%20%D0%A5%D1%83%D0%B4%D0%B8.svg">
-     <img src="img/%D0%B4%D0%BE%20%D0%BA%D0%BE%D0%BD%D1%86%D0%B0%20%D0%B0%D0%BA%D1%86%D0%B8%D0%B8%20%D0%BE%D1%81%D1%82%D0%B0%D0%BB%D0%BE%D1%81%D1%8C_.svg">
+     <img class="banner__img" src="img/%D0%A1%D0%B5%D0%BA%D1%80%D0%B5%D1%82%D0%BD%D0%B0%D1%8F%20%D0%B0%D0%BA%D1%86%D0%B8%D1%8F%20%D0%B4%D0%BB%D1%8F%20%D0%BF%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D1%87%D0%B8%D0%BA%D0%BE%D0%B2.svg">
+     <img class="banner__img banner__img_pad" src="img/%D0%A4%D1%83%D1%82%D0%B1%D0%BE%D0%BB%D0%BA%D0%B0%20%D0%B7%D0%B0%201%20%D1%80%D1%83%D0%B1%20%D0%9F%D1%80%D0%B8%20%D0%BF%D0%BE%D0%BA%D1%83%D0%BF%D0%BA%D0%B5%20%D0%A1%D0%B2%D0%B8%D1%82%D1%88%D0%BE%D1%82%D0%B0%20%D0%B8%D0%BB%D0%B8%20%D0%A5%D1%83%D0%B4%D0%B8.svg">
+     <img class="banner__img banner__img_mob" src="img/%D0%B4%D0%BE%20%D0%BA%D0%BE%D0%BD%D1%86%D0%B0%20%D0%B0%D0%BA%D1%86%D0%B8%D0%B8%20%D0%BE%D1%81%D1%82%D0%B0%D0%BB%D0%BE%D1%81%D1%8C_.svg">
      
      <div class="time">
-         <button class="sweatshot">Свитшоты</button>
+         <button class="time__but">Свитшоты</button>
     <div id="timer">
-        <div id="hour">0</div>&nbsp;
-        <div id="minute">1</div>
+        <div id="hour">1</div>&nbsp;
+        <div id="minute">0</div>
     </div>
-        <button class="sweatshot">Худи</button>
+        <button class="time__but">Худи</button>
     </div>
-      
-      <div class="time-desc">
-          <span>часов</span> <span>минут</span>
+     
+       <div class="time-desc">
+          <span class="time-desc__hours">часов</span> 
+           <span class= "time-desc__minutes">минут</span>
          </div>
+     
+     <div class="time-mob">
+     <button class="time-mob__but">Свитшоты</button>
+     <button class="time-mob__but">Худи</button>
+     </div>
+     
+    
      
     </div>
  
